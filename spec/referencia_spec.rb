@@ -70,11 +70,15 @@ describe Referencia do
         context "Enumerable" do
           before :each do
             @lista2 = ListaDoble.new()
-            @lista2.add_many([1,8,7,17,32,47,2,3])
+            @lista2.add_many([8,7,17,32,47,2,3])
           end
     
           it "Comprobando maximo" do
             expect(@lista2.max).to eq(47)
+          end
+          
+           it "Comprobando minimo" do
+            expect(@lista2.min).to eq(2)
           end
           
         end
