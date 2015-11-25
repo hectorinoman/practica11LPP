@@ -8,26 +8,29 @@ class ListaDoble
 
     def initialize
         @first = Nodo.new(nil)
-        @last = @first
-    end
-    
-    def add_first_empty(nodo)
-        nodo.next_node = @first
-        nodo.prev_node = @last
-        @first = nodo
-        @last = nodo
+        @first = nil
+        @last = Nodo.new(nil)
+        @last = nil
     end
     
     def add_first(nodo)
-        nodo.next_node = @first
-        @first.prev_node = nodo
-        @first = nodo
+        aux = Nodo.new(nodo, nil, nil)
+        if (@first == nil && @last == nil)
+            @first = aux
+            @last = aux
+        else
+            aux.next_node = @first
+            @first.prev_node = aux
+            @first = aux
+        end
     end
     
+    
     def add_last(nodo)
-        nodo.prev_node = @last
-        @last.next_node = nodo
-        @last = nodo
+        aux = Nodo.new(nodo, nil, nil)
+        aux.prev_node = @last
+        @last.next_node = aux
+        @last = aux
     end
 
     def del_first
@@ -38,6 +41,20 @@ class ListaDoble
     def del_last
         @last = @last.prev_node
         @last.next_node = nil
+    end
+    
+    def each
+        i = @first
+        while (i != nil) 
+            yield i.value
+            i = i.next_node
+        end
+    end
+
+    def add_many(nodo)
+        nodo.each do |num| 
+            self.add_first(num)
+        end
     end
     
 

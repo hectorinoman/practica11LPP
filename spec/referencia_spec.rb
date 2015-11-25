@@ -34,52 +34,7 @@ describe Referencia do
 
     end
     
-    context "ListaDoble" do
-        
-      it "Se debe poder insertar un elemento en la lista" do
-        @lista.add_first_empty(@nodo1)
-        expect(@lista.first).to eq(@nodo1)
-        expect(@nodo1.value).to eq(@referencia1)
-      end
-      
-      
-      it "Se debe poder insertar varios elementos en la lista por el principio" do
-        @lista.add_first_empty(@nodo1)
-        @lista.add_first(@nodo2)
-        expect(@lista.first).to eq(@nodo2)
-        expect(@nodo2.value).to eq(@referencia2)
-      end
-      
-      it "Se debe poder insertar un elemento por el final de la lista" do
-        @lista.add_first_empty(@nodo1)
-        @lista.add_last(@nodo2)
-        expect(@lista.last).to eq(@nodo2)
-        expect(@nodo2.value).to eq(@referencia2)
-      end
-      
-      it "Se debe poder eliminar un elemento por el principio de la lista" do
-        @lista.add_first_empty(@nodo1)
-        @lista.add_first(@nodo2)
-        @lista.add_first(@nodo3)
-        @lista.add_first(@nodo4)
-        @lista.add_first(@nodo5)
-        @lista.del_first
-        expect(@lista.first).to eq(@nodo4)
-        expect(@nodo2.value).to eq(@referencia2)
-      end
-      
-      it "Se debe poder eliminar un elemento por el final de la lista" do
-        @lista.add_first_empty(@nodo1)
-        @lista.add_last(@nodo2)
-        @lista.add_last(@nodo3)
-        @lista.add_last(@nodo4)
-        @lista.add_last(@nodo5)
-        @lista.del_last
-        expect(@lista.last).to eq(@nodo4)
-        expect(@nodo2.value).to eq(@referencia2)
-      end
-      
-    end
+
           
       context "Herencia" do
       it "Comprobar es una revista es una referencia" do
@@ -115,12 +70,11 @@ describe Referencia do
         context "Enumerable" do
           before :each do
             @lista2 = ListaDoble.new()
-            @lista2.add_first_empty([9])
-            @lista2.add_first(3)
+            @lista2.add_many([1,8,7,17,32,47,2,3])
           end
     
           it "Comprobando maximo" do
-            expect(@lista2.max).to eq(9)
+            expect(@lista2.max).to eq(47)
           end
           
         end
