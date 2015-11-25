@@ -99,7 +99,15 @@ describe Referencia do
         end
         
         it "La Referencia del Autor David Chelismsky es mayor que la de David Flanagan" do
-          expect(@r3 < @r4).to eq(true)
+          expect(@referencia3 > @referencia4).to eq(true)
+        end
+        
+        it "La Referencia del Autor David Chelismsky es menor que la de David Flanagan" do
+          expect(@referencia3 < @referencia4).to eq(false)
+        end
+        
+        it "La Referencia Richard E. Silverman es menor que la David Chelimsky" do
+          expect(@referencia5 < @referencia4).to eq(false)
         end
       
       end

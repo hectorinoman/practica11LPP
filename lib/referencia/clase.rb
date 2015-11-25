@@ -1,5 +1,7 @@
 class Bibliografia
     
+    include Comparable
+    
     attr_accessor :autor, :titulo, :serie, :editorial, :edicion, :fecha
     
     def initialize(autor, titulo, serie, editorial, edicion, fecha)
@@ -11,6 +13,14 @@ class Bibliografia
         @fecha = fecha
         
     end
+    
+        def <=> (other)
+            if @autor == other.autor
+                @titulo <=> other.titulo
+            else
+                @autor <=> other.autor
+            end
+        end
 end    
 
     
