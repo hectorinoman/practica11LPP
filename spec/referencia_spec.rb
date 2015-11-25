@@ -112,6 +112,19 @@ describe Referencia do
       
       end
       
+        context "Enumerable" do
+          before :each do
+            @lista2 = ListaDoble.new()
+            @lista2.add_first_empty([9])
+            @lista2.add_first(3)
+          end
+    
+          it "Comprobando maximo" do
+            expect(@lista2.max).to eq(9)
+          end
+          
+        end
+      
 
       
     

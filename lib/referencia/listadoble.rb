@@ -1,5 +1,7 @@
 Nodo = Struct.new(:value, :next_node, :prev_node)
 
+include Enumerable
+
 class ListaDoble
     
    attr_accessor :first, :last, :value, :next_node, :prev_node
