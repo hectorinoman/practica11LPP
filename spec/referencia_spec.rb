@@ -47,12 +47,7 @@ describe Referencia do
       
       
       context "Comparable" do
-        before :each do
-        @referencia3 = Electronic.new(["David Flanagan", "Yukihiro Matsumoto"], "The Ruby Programming Language", "Serie", "OReilly Media", " 1 edition", "February 4, 2008", "hectorinoman@gmail.com")
-        @referencia4 = Book.new(["David Chelimsky", "Dave Astels", " Bryan Helmkamp", "Dan North", "Zach Dennis", "Aslak Hellesoy"], "The RSpec Book: Behaviour Driven Development with RSpec, Cucumber, and Friends", "The Facets of Ruby", "Pragmatic Bookshelf", "1 edition", "December 25, 2010", "mi libro favorito")
-        @referencia5 = Magazine.new(["Richard E. Silverman"], "Git Pocket Guide", "Serie", "OReilly Media", "1 edition",  "August 2, 2013","mi revista favorita")    
-        end
-        
+
         it "La Referencia del Autor David Chelismsky es mayor que la de David Flanagan" do
           expect(@referencia3 > @referencia4).to eq(true)
         end
@@ -63,6 +58,10 @@ describe Referencia do
         
         it "La Referencia Richard E. Silverman es menor que la David Chelimsky" do
           expect(@referencia5 < @referencia4).to eq(false)
+        end
+        
+        it "La Referencia Richard E. Silverman es mayor que la David Chelimsky" do
+          expect(@referencia5 > @referencia4).to eq(true)
         end
       
       end
@@ -80,6 +79,11 @@ describe Referencia do
            it "Comprobando minimo" do
             expect(@lista2.min).to eq(2)
           end
+          
+          it "Numero de elementos" do
+            expect(@lista2.count).to eq(7)
+          end
+          
           
         end
       
