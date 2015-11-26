@@ -84,6 +84,10 @@ describe Referencia do
             expect(@lista2.count).to eq(7)
           end
           
+          it "Ordenacion de la lista" do
+            expect(@lista2.sort).to eq([2,3,7,8,17,32,47])
+          end
+          
           
         end
       
