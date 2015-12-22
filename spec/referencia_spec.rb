@@ -10,6 +10,12 @@ describe Referencia do
             editorial 'Lisin'
             edicion '2010 edition'
         end
+        
+        @a1 = Magazine.new('La ciencia en su estado puro') do
+            autor 'Hector Rodriguez'
+            fecha '10 Junio 1982'
+            magazine 'La casa Terrera'
+        end
      end
      
          
@@ -19,6 +25,16 @@ describe Referencia do
         end
         it "Jerarquia is ok" do
             #@a.is_a?(Newspaper).should eq(false)
+        end
+    end
+    
+    context "Clase Newspaper" do
+        it "Pertenece a la clase Newspaper" do
+            @a2.instance_of?(Newspaper).should eq(true)
+        end
+        it "Jerarquia is ok" do
+            @a2.is_a?(Newspaper).should eq(true)
+            @a2.is_a?(Bibliografia).should eq(true)
         end
     end
 end
