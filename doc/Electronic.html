@@ -72,6 +72,8 @@
     
     <li class="calls-super" ><a href="#method-c-new">::new</a>
     
+    <li ><a href="#method-i-to_s">#to_s</a>
+    
   </ul>
 </div>
 
@@ -107,7 +109,7 @@
       <div id="attribute-i-electronic" class="method-detail">
         <div class="method-heading attribute-method-heading">
           <span class="method-name">electronic</span><span
-            class="attribute-access-type">[RW]</span>
+            class="attribute-access-type">[R]</span>
         </div>
 
         <div class="method-description">
@@ -131,7 +133,7 @@
         
         <div class="method-heading">
           <span class="method-name">new</span><span
-            class="method-args">(autor, titulo, serie, editorial, edicion, fecha, electronic)</span>
+            class="method-args">(titulo, &bloque)</span>
           
           <span class="method-click-advice">click to toggle source</span>
           
@@ -151,10 +153,52 @@
 
           
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File lib/referencia/clase.rb, line 52</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">autor</span>, <span class="ruby-identifier">titulo</span>, <span class="ruby-identifier">serie</span>, <span class="ruby-identifier">editorial</span>, <span class="ruby-identifier">edicion</span>, <span class="ruby-identifier">fecha</span>, <span class="ruby-identifier">electronic</span>)
-    <span class="ruby-keyword">super</span>(<span class="ruby-identifier">autor</span>, <span class="ruby-identifier">titulo</span>, <span class="ruby-identifier">serie</span>, <span class="ruby-identifier">editorial</span>, <span class="ruby-identifier">edicion</span>, <span class="ruby-identifier">fecha</span>)
-    <span class="ruby-ivar">@electronic</span> = <span class="ruby-identifier">electronic</span>
+            <pre><span class="ruby-comment"># File lib/referencia/clase.rb, line 139</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span> (<span class="ruby-identifier">titulo</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">bloque</span>)
+    <span class="ruby-keyword">super</span>(<span class="ruby-identifier">titulo</span>)
+    <span class="ruby-identifier">instance_eval</span> <span class="ruby-operator">&amp;</span><span class="ruby-identifier">bloque</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">block_given?</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-to_s" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">to_s</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="to_s-source">
+            <pre><span class="ruby-comment"># File lib/referencia/clase.rb, line 148</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_s</span>
+   <span class="ruby-identifier">s</span> = <span class="ruby-identifier">get_autores</span>
+   <span class="ruby-identifier">s</span> <span class="ruby-operator">+=</span> <span class="ruby-string">&#39; (&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">get_year</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;). &#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">get_titulo</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39; [&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@electronic</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;]. &#39;</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
           

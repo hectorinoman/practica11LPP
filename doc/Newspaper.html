@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 
-<title>class Magazine - RDoc Documentation</title>
+<title>class Newspaper - RDoc Documentation</title>
 
 <script type="text/javascript">
   var rdoc_rel_prefix = "./";
@@ -80,9 +80,9 @@
   </div>
 </nav>
 
-<main role="main" aria-labelledby="class-Magazine">
-  <h1 id="class-Magazine" class="class">
-    class Magazine
+<main role="main" aria-labelledby="class-Newspaper">
+  <h1 id="class-Newspaper" class="class">
+    class Newspaper
   </h1>
 
   <section class="description">
@@ -106,10 +106,10 @@
       </header>
 
       
-      <div id="attribute-i-magazine" class="method-detail">
+      <div id="attribute-i-newspaper" class="method-detail">
         <div class="method-heading attribute-method-heading">
-          <span class="method-name">magazine</span><span
-            class="attribute-access-type">[RW]</span>
+          <span class="method-name">newspaper</span><span
+            class="attribute-access-type">[R]</span>
         </div>
 
         <div class="method-description">
@@ -153,7 +153,7 @@
 
           
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File lib/referencia/clase.rb, line 109</span>
+            <pre><span class="ruby-comment"># File lib/referencia/clase.rb, line 90</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span> (<span class="ruby-identifier">titulo</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">bloque</span>)
     <span class="ruby-keyword">super</span>(<span class="ruby-identifier">titulo</span>)
     <span class="ruby-identifier">instance_eval</span> <span class="ruby-operator">&amp;</span><span class="ruby-identifier">bloque</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">block_given?</span>
@@ -195,21 +195,10 @@
 
           
           <div class="method-source-code" id="to_s-source">
-            <pre><span class="ruby-comment"># File lib/referencia/clase.rb, line 119</span>
+            <pre><span class="ruby-comment"># File lib/referencia/clase.rb, line 100</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">to_s</span>
    <span class="ruby-identifier">s</span> = <span class="ruby-identifier">get_autores</span>
-
-
-   <span class="ruby-identifier">titulo</span> = <span class="ruby-string">&quot;&quot;</span>
-   <span class="ruby-identifier">aux</span> = <span class="ruby-identifier">get_titulo</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp">/\W+/</span>)
-
-   <span class="ruby-identifier">aux</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">element</span><span class="ruby-operator">|</span>
-       <span class="ruby-identifier">titulo</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">element</span>.<span class="ruby-identifier">capitalize</span>
-       <span class="ruby-identifier">titulo</span> <span class="ruby-operator">+=</span> <span class="ruby-string">&#39; &#39;</span>
-   <span class="ruby-keyword">end</span>
-
-   <span class="ruby-identifier">titulo</span> = <span class="ruby-identifier">titulo</span>.<span class="ruby-identifier">chomp</span>(<span class="ruby-string">&quot; &quot;</span>)
-   <span class="ruby-identifier">s</span> <span class="ruby-operator">+=</span> <span class="ruby-string">&#39; (&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">get_year</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;). &#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">titulo</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;. En &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@magazine</span>
+   <span class="ruby-identifier">s</span> <span class="ruby-operator">+=</span> <span class="ruby-string">&#39; (&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">get_fecha</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;). &#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">get_titulo</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;. &#39;</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@newspaper</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
           

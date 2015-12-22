@@ -85,6 +85,16 @@
     
     <li ><a href="#method-i-3C-3D-3E">#&lt;=&gt;</a>
     
+    <li ><a href="#method-i-autor">#autor</a>
+    
+    <li ><a href="#method-i-get_autores">#get_autores</a>
+    
+    <li ><a href="#method-i-get_fecha">#get_fecha</a>
+    
+    <li ><a href="#method-i-get_titulo">#get_titulo</a>
+    
+    <li ><a href="#method-i-get_year">#get_year</a>
+    
   </ul>
 </div>
 
@@ -117,35 +127,9 @@
       </header>
 
       
-      <div id="attribute-i-autor" class="method-detail">
+      <div id="attribute-i-autores" class="method-detail">
         <div class="method-heading attribute-method-heading">
-          <span class="method-name">autor</span><span
-            class="attribute-access-type">[RW]</span>
-        </div>
-
-        <div class="method-description">
-        
-        
-        
-        </div>
-      </div>
-      
-      <div id="attribute-i-edicion" class="method-detail">
-        <div class="method-heading attribute-method-heading">
-          <span class="method-name">edicion</span><span
-            class="attribute-access-type">[RW]</span>
-        </div>
-
-        <div class="method-description">
-        
-        
-        
-        </div>
-      </div>
-      
-      <div id="attribute-i-editorial" class="method-detail">
-        <div class="method-heading attribute-method-heading">
-          <span class="method-name">editorial</span><span
+          <span class="method-name">autores</span><span
             class="attribute-access-type">[RW]</span>
         </div>
 
@@ -159,19 +143,6 @@
       <div id="attribute-i-fecha" class="method-detail">
         <div class="method-heading attribute-method-heading">
           <span class="method-name">fecha</span><span
-            class="attribute-access-type">[RW]</span>
-        </div>
-
-        <div class="method-description">
-        
-        
-        
-        </div>
-      </div>
-      
-      <div id="attribute-i-serie" class="method-detail">
-        <div class="method-heading attribute-method-heading">
-          <span class="method-name">serie</span><span
             class="attribute-access-type">[RW]</span>
         </div>
 
@@ -209,7 +180,7 @@
         
         <div class="method-heading">
           <span class="method-name">new</span><span
-            class="method-args">(autor, titulo, serie, editorial, edicion, fecha)</span>
+            class="method-args">(titulo, &bloque)</span>
           
           <span class="method-click-advice">click to toggle source</span>
           
@@ -224,15 +195,10 @@
 
           
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File lib/referencia/clase.rb, line 7</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">autor</span>, <span class="ruby-identifier">titulo</span>, <span class="ruby-identifier">serie</span>, <span class="ruby-identifier">editorial</span>, <span class="ruby-identifier">edicion</span>, <span class="ruby-identifier">fecha</span>)
-    <span class="ruby-ivar">@autor</span> = <span class="ruby-identifier">autor</span>
-    <span class="ruby-ivar">@titulo</span> = <span class="ruby-identifier">titulo</span>
-    <span class="ruby-ivar">@serie</span> = <span class="ruby-identifier">serie</span>
-    <span class="ruby-ivar">@editorial</span> = <span class="ruby-identifier">editorial</span>
-    <span class="ruby-ivar">@edicion</span> = <span class="ruby-identifier">edicion</span>
-    <span class="ruby-ivar">@fecha</span> = <span class="ruby-identifier">fecha</span>
-    
+            <pre><span class="ruby-comment"># File lib/referencia/clase.rb, line 11</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">titulo</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">bloque</span>)
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">titulo</span> = <span class="ruby-identifier">titulo</span>
+    <span class="ruby-identifier">instance_eval</span> <span class="ruby-operator">&amp;</span><span class="ruby-identifier">bloque</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">block_given?</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -271,13 +237,193 @@
 
           
           <div class="method-source-code" id="3C-3D-3E-source">
-            <pre><span class="ruby-comment"># File lib/referencia/clase.rb, line 17</span>
+            <pre><span class="ruby-comment"># File lib/referencia/clase.rb, line 7</span>
 <span class="ruby-keyword">def</span> <span class="ruby-operator">&lt;=&gt;</span> (<span class="ruby-identifier">other</span>)
-    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@autor</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">autor</span>
-        <span class="ruby-ivar">@titulo</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">titulo</span>
-    <span class="ruby-keyword">else</span>
-        <span class="ruby-ivar">@autor</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">autor</span>
-    <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">get_year</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">get_year</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-autor" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">autor</span><span
+            class="method-args">(name)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="autor-source">
+            <pre><span class="ruby-comment"># File lib/referencia/clase.rb, line 16</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">autor</span>(<span class="ruby-identifier">name</span>)
+    <span class="ruby-ivar">@autores</span> = []
+    <span class="ruby-ivar">@autores</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">name</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-get_autores" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_autores</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="get_autores-source">
+            <pre><span class="ruby-comment"># File lib/referencia/clase.rb, line 25</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_autores</span>
+   <span class="ruby-identifier">s</span> = <span class="ruby-string">&quot;&quot;</span>
+   <span class="ruby-identifier">i</span>=<span class="ruby-value">0</span>
+
+   <span class="ruby-keyword">while</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@autores</span>.<span class="ruby-identifier">size</span>
+        <span class="ruby-identifier">nombre</span>, <span class="ruby-identifier">apellido</span> = <span class="ruby-ivar">@autores</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">split</span>(<span class="ruby-regexp">/\W+/</span>)
+        <span class="ruby-identifier">nombre</span> = <span class="ruby-identifier">nombre</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">+</span> <span class="ruby-string">&quot;.&quot;</span>
+        <span class="ruby-identifier">autor</span> = <span class="ruby-identifier">apellido</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;, &#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">nombre</span>
+        <span class="ruby-identifier">s</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">autor</span>
+
+        <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span>(<span class="ruby-identifier">i</span> <span class="ruby-operator">==</span> <span class="ruby-ivar">@autores</span>.<span class="ruby-identifier">size</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>)
+            <span class="ruby-identifier">s</span> <span class="ruby-operator">+=</span> <span class="ruby-string">&quot; &amp; &quot;</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">i</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+   <span class="ruby-keyword">end</span>
+
+   <span class="ruby-keyword">return</span> <span class="ruby-identifier">s</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-get_fecha" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_fecha</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="get_fecha-source">
+            <pre><span class="ruby-comment"># File lib/referencia/clase.rb, line 48</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_fecha</span>
+    <span class="ruby-identifier">fecha</span> = <span class="ruby-ivar">@fecha</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">fecha</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-get_titulo" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_titulo</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="get_titulo-source">
+            <pre><span class="ruby-comment"># File lib/referencia/clase.rb, line 44</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_titulo</span>
+    <span class="ruby-identifier">titulo</span> = <span class="ruby-ivar">@titulo</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">titulo</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-get_year" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_year</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="get_year-source">
+            <pre><span class="ruby-comment"># File lib/referencia/clase.rb, line 52</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_year</span>
+    <span class="ruby-identifier">year</span> = <span class="ruby-ivar">@fecha</span>[<span class="ruby-value">-4</span><span class="ruby-operator">..</span><span class="ruby-value">-1</span>]
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">year</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
           

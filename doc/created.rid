@@ -1,18 +1,18 @@
-Tue, 15 Dec 2015 17:08:45 +0000
-./Guardfile	Tue, 15 Dec 2015 16:14:18 +0000
-./Gemfile	Tue, 15 Dec 2015 16:14:18 +0000
-./spec/spec_helper.rb	Tue, 15 Dec 2015 16:14:18 +0000
-./spec/referencia_spec.rb	Tue, 15 Dec 2015 16:14:18 +0000
-./README.md	Tue, 15 Dec 2015 16:14:18 +0000
-./LICENSE.txt	Tue, 15 Dec 2015 16:14:18 +0000
-./bin/setup	Tue, 15 Dec 2015 16:14:18 +0000
-./bin/console	Tue, 15 Dec 2015 16:14:18 +0000
-./Rakefile	Tue, 15 Dec 2015 16:14:18 +0000
-./lib/referencia/version.rb	Tue, 15 Dec 2015 16:14:18 +0000
-./lib/referencia/lista.rb	Tue, 15 Dec 2015 16:14:18 +0000
-./lib/referencia/listadoble.rb	Tue, 15 Dec 2015 16:14:18 +0000
-./lib/referencia/clase.rb	Tue, 15 Dec 2015 16:14:18 +0000
-./lib/referencia.rb	Tue, 15 Dec 2015 16:14:18 +0000
-./CODE_OF_CONDUCT.md	Tue, 15 Dec 2015 16:14:18 +0000
-./Gemfile.lock	Tue, 15 Dec 2015 16:14:18 +0000
-./referencia.gemspec	Tue, 15 Dec 2015 16:14:18 +0000
+Tue, 22 Dec 2015 15:43:49 +0000
+./Guardfile	Tue, 22 Dec 2015 15:25:44 +0000
+./Gemfile	Tue, 22 Dec 2015 15:25:44 +0000
+./spec/spec_helper.rb	Tue, 22 Dec 2015 15:25:44 +0000
+./spec/referencia_spec.rb	Tue, 22 Dec 2015 15:42:51 +0000
+./README.md	Tue, 22 Dec 2015 15:25:44 +0000
+./LICENSE.txt	Tue, 22 Dec 2015 15:25:44 +0000
+./bin/setup	Tue, 22 Dec 2015 15:25:44 +0000
+./bin/console	Tue, 22 Dec 2015 15:25:44 +0000
+./Rakefile	Tue, 22 Dec 2015 15:25:44 +0000
+./lib/referencia/version.rb	Tue, 22 Dec 2015 15:25:44 +0000
+./lib/referencia/lista.rb	Tue, 22 Dec 2015 15:25:44 +0000
+./lib/referencia/listadoble.rb	Tue, 22 Dec 2015 15:25:44 +0000
+./lib/referencia/clase.rb	Tue, 22 Dec 2015 15:39:25 +0000
+./lib/referencia.rb	Tue, 22 Dec 2015 15:25:44 +0000
+./CODE_OF_CONDUCT.md	Tue, 22 Dec 2015 15:25:44 +0000
+./Gemfile.lock	Tue, 22 Dec 2015 15:25:44 +0000
+./referencia.gemspec	Tue, 22 Dec 2015 15:25:44 +0000
