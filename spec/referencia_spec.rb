@@ -70,4 +70,16 @@ describe Referencia do
             @a3.is_a?(Bibliografia).should eq(true)
         end
     end
+    
+    
+    context "Almacena correctamente" do
+        it "Comparar bibliografías @2 > @1" do
+           expect(@a2 > @a1).to eq(true)
+           expect(@a3 < @a).to eq(true)
+        end
+
+        it "Comparar bibliografías @3 > @" do
+           expect(@a3 < @a).to eq(true)
+        end
+    end
 end
