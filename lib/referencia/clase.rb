@@ -132,3 +132,21 @@ class Magazine < Bibliografia
        s += ' (' + get_year + '). ' + titulo + ". En " + @magazine
     end
 end
+
+class Electronic < Bibliografia
+    attr_reader :electronic
+
+    def initialize (titulo, &bloque)
+        super(titulo)
+        instance_eval &bloque if block_given?
+    end
+
+    def electronic(name)
+        @electronic = name
+    end
+
+    def to_s
+       s = get_autores
+       s += ' (' + get_year + '). ' + get_titulo + ' [' + @electronic + ']. '
+    end
+end
