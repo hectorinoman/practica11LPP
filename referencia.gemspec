@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = "http://rubygems.org/gems/practica11-hectorinoman"
 
   if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = "https://rubygems.org/"
+    spec.metadata['allowed_push_host'] = "https://rubygems.org"
   end
 
 
