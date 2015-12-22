@@ -10,11 +10,12 @@ describe Referencia do
             editorial 'Lisin'
             edicion '2010 edition'
         end
+    
         
-        @a1 = Magazine.new('La ciencia en su estado puro') do
-            autor 'Hector Rodriguez'
-            fecha '10 Junio 1982'
-            magazine 'La casa Terrera'
+        @a2 = Newspaper.new('ABC') do
+            autor 'Juan Carlos Espinosa'
+            fecha '30 junio 2010'
+            newspaper 'Nope'
         end
      end
      

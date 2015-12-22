@@ -82,3 +82,23 @@ class Book < Bibliografia
        s += ' (' + get_year + '). ' + get_titulo + ' (' + @edicion + '). ' + @editorial
     end
 end
+
+
+class Newspaper < Bibliografia
+    attr_reader :newspaper
+
+    def initialize (titulo, &bloque)
+        super(titulo)
+        instance_eval &bloque if block_given?
+    end
+
+    def newspaper(name)
+        @newspaper = name
+    end
+
+
+    def to_s
+       s = get_autores
+       s += ' (' + get_fecha + '). ' + get_titulo + '. ' + @newspaper
+    end
+end
