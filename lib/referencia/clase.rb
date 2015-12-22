@@ -102,3 +102,33 @@ class Newspaper < Bibliografia
        s += ' (' + get_fecha + '). ' + get_titulo + '. ' + @newspaper
     end
 end
+
+class Magazine < Bibliografia
+    attr_accessor :magazine
+
+    def initialize (titulo, &bloque)
+        super(titulo)
+        instance_eval &bloque if block_given?
+    end
+
+    def magazine(name)
+        @magazine = name
+    end
+
+
+    def to_s
+       s = get_autores
+
+
+       titulo = ""
+       aux = get_titulo.split(/\W+/)
+
+       aux.each do |element|
+           titulo += element.capitalize
+           titulo += ' '
+       end
+
+       titulo = titulo.chomp(" ")
+       s += ' (' + get_year + '). ' + titulo + ". En " + @magazine
+    end
+end
