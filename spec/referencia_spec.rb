@@ -81,5 +81,25 @@ describe Referencia do
         it "Comparar bibliografías @3 > @" do
            expect(@a3 < @a).to eq(true)
         end
+        
+        it "Se almacena el autor" do
+            @a.autores.should eq(['Charles Lip'])
+        end
+        it "Se almacena correctamente el título" do
+            @a.titulo.should eq('The Rspec book 2010')
+        end
+        it "Se almacena correctamente la fecha" do
+            @a.get_fecha.should eq('April 29, 2014')
+        end
+        it "Listado de autores" do
+            @a.get_autores.should eq('Lip, C.')
+        end
+        it "Obtener título" do
+           @a.get_titulo.should eq('The Rspec book 2010')
+        end
+
+        it "Obtener la fecha" do
+           @a.get_fecha.should eq('April 29, 2014')
+        end
     end
 end
