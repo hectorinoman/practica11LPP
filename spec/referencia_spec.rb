@@ -23,6 +23,12 @@ describe Referencia do
             fecha '30 junio 2010'
             newspaper 'Nope'
         end
+        
+        @a3 = Electronic.new('Spotify MUsic') do
+            autor 'Diland John'
+            fecha '3 Marzo 1996'
+            electronic 'en línea'
+        end
      end
      
          
@@ -52,6 +58,16 @@ describe Referencia do
         it "Jerarquia is ok" do
             @a1.is_a?(Magazine).should eq(true)
             @a1.is_a?(Bibliografia).should eq(true)
+        end
+    end
+    
+    context "Clase Electronic" do
+        it "Pertenece a clase Electronic" do
+            @a3.instance_of?(Electronic).should eq(true)
+        end
+        it "Jerarquia is ok" do
+            @a3.is_a?(Electronic).should eq(true)
+            @a3.is_a?(Bibliografia).should eq(true)
         end
     end
 end
